@@ -1,0 +1,191 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.bodyContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+/* Container for the entire Kanban board */
+.kanban-board {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+/* Individual columns */
+.column {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  margin: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Title of each column */
+.column h2 {
+  font-size: 18px;
+  margin: 0;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Container for cards within a column */
+.cards {
+  margin-top: 10px;
+}
+
+/* Individual card */
+.card {
+  padding: 10px; 
+  margin: 6px 0;
+  background-color: #ffffff;
+  border: 1px solid #e1e1e1;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+/* Tags */
+.tags {
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  margin-right: 5px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Select dropdowns */
+/* ... previous styles ... */
+
+/* Select dropdowns */
+.controls select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  appearance: none; /* Remove default appearance */
+  background-color: #fff;
+  background-image: linear-gradient(to bottom, #f9f9f9, #fff);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Better styling for select dropdowns */
+.controls select {
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Hover effect for select dropdowns */
+.controls select:hover {
+  border-color: #999;
+  background-color: #f5f5f5; /* Adjusted hover background color */
+}
+
+/* Focus effect for select dropdowns */
+.controls select:focus {
+  border-color: #333;
+  background-color: #f9f9f9; /* Adjusted focus background color */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  outline: none; /* Remove default focus outline */
+
+}
+
+/* ... rest of the styles ... */
+
+
+/* Select labels */
+/* ... previous styles ... */
+
+/* Select labels */
+.controls label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 50px; /* Adjusted margin */
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+/* Icon for the labels */
+.controls label::before {
+  content: '\f0c9'; /* FontAwesome icon for caret () */
+  font-family: FontAwesome;
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+/* ... rest of the styles ... */
+
+
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
